@@ -11,7 +11,37 @@
 <body>
   
  <h1>Hi</h1>
- <p>This little codepen project is meant to remind myself of how redux works. It uses the analogy of an insurance company to enhance the clarity of the different functionalities and steps involved in redux. The idea is from a youtube video but anyway I copied it here. Open the console to confirm it is working.</p>
+ <p>
+   This little codepen project is meant to remind myself of how redux works. 
+   It uses the analogy of an insurance company to enhance the clarity of the 
+   different functionalities and steps involved in redux. The idea is from a 
+   youtube video but anyway I copied it here. Open the console to confirm it 
+   is working.
+</p>
+<p>
+  Use store.dipatch('some_form_name'('variable(s)')) then 
+  console.log(store.getState()) to confirm the object is being updated.
+</p>
+
+<h3>
+  The Analogy
+</h3>
+<p>
+  The general analogy in regards to the insurance company is:
+    Action Creator = Creating a form
+    Action = Form
+    Dispatch = Sending the form to different departments
+    Reducers = Departments
+    State = Outsourced history of all the forms that have ever been processed, visible to all
+    
+  Someone creates one of three forms, for making a claim, joining a new policy, ending a contract with a policy.
+  If they are making a claim the claims department adds there name to the history of claims list.
+  The accounting department gives the money asked for. If they are joining a policy their name is added to the list of names for the policy. 
+  The accounting department adds the fee of joining. If leaving a policy, name is removed from policy name list.
+
+  When dispatching a form the combineReducers is used to link all reducers so that the form is sent to all of them everytime.
+  The store is the whole company. So when we do store.dispatch(...), we are saying from the company, send the form to ...
+</p>
   
 </body>
 <!-- partial -->
