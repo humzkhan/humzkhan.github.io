@@ -23,16 +23,14 @@ h3{
   color: rgb(85, 85, 85);
   text-align: left;
   padding: 10px;
-}
-
-h3:hover{
-  border: 10px solid;
+  border: 10px;
   border-image: 
-    linear-gradient(
-      to top, 
-      #ff8a00, 
-      #da1b60
-    ) .2 .2 .2 5%;
+  linear-gradient(
+    to top, 
+    #ff880098, 
+    #da1b6196
+  ) .2 .2 .2 5%;
+
 }
 
 p{
