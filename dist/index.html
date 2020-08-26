@@ -11,14 +11,14 @@
 <body>
   
  <h1>Hi</h1>
- <p>
+ <p class = box>
    This little codepen project is meant to remind myself of how redux works. 
    It uses the analogy of an insurance company to enhance the clarity of the 
    different functionalities and steps involved in redux. The idea is from a 
    youtube video but anyway I copied it here. Open the console to confirm it 
    is working.
 </p>
-<p>
+<p class = box> 
   Use store.dipatch('some_form_name'('variable(s)')) then 
   console.log(store.getState()) to confirm the object is being updated.
 </p>
@@ -26,13 +26,13 @@
 <h3>
   The Analogy
 </h3>
-<p>
+<p class = box>
   The general analogy in regards to the insurance company is: <br>
 </p>
 
 
 <div>
-  <p>
+  <p class = box>
     Action Creator = Submitting a form<br>
     Action = Form Types<br>
     Dispatch = Form Receiver sends the form to the different departments<br>
@@ -43,7 +43,7 @@
 </div>
 
 
-<p>
+<p class = box>
   <br>
 
   Someone submits an insurance form to the company. The form receiver takes 
@@ -70,7 +70,7 @@
   Additional Info
 </h3>
 
-<p>
+<p class = box>
   When dispatching an action (form) the combineReducers is the redux function used to link all reducers (send the action to each of the departments).
   The store is another redux function that represents the whole state-tree (the outsourced data the departments access). When store.dispatch(...), is called the state is
   open to being updated by the reducers invoked with the action.<br><br>
