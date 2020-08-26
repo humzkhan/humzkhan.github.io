@@ -27,18 +27,18 @@
   The Analogy
 </h3>
 <p>
-  The general analogy in regards to the insurance company is:
-    Action Creator = Creating a form
-    Action = Form
-    Dispatch = Sending the form to different departments
-    Reducers = Departments
-    State = Outsourced history of all the forms that have ever been processed, visible to all
-    
-  Someone creates one of three forms, for making a claim, joining a new policy, ending a contract with a policy.
+  The general analogy in regards to the insurance company is: <br>
+    Action Creator = Creating a form<br>
+    Action = Form<br>
+    Dispatch = Sending the form to different departments<br>
+    Reducers = Departments<br>
+    State = Outsourced history of all the forms that have ever been processed, visible to all<br>
+    <br>  
+  Someone creates one of three forms, for making a claim, joining a new policy, ending a contract with a policy.<br>
   If they are making a claim the claims department adds there name to the history of claims list.
   The accounting department gives the money asked for. If they are joining a policy their name is added to the list of names for the policy. 
   The accounting department adds the fee of joining. If leaving a policy, name is removed from policy name list.
-
+  <br><br>
   When dispatching a form the combineReducers is used to link all reducers so that the form is sent to all of them everytime.
   The store is the whole company. So when we do store.dispatch(...), we are saying from the company, send the form to ...
 </p>
