@@ -9,7 +9,6 @@ font-family: -system-ui,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,Helveti
 h1{
   color: rgb(85, 85, 85);
   text-align: left;
-  cursor: crosshair;
   border: 10px solid;
   border-image: 
     linear-gradient(
@@ -20,9 +19,29 @@ h1{
   padding: 15px;
 }
 
+h3{
+  color: rgb(85, 85, 85);
+  text-align: left;
+  padding: 10px;
+}
+
+h3:hover{
+  border: 10px solid;
+  border-image: 
+    linear-gradient(
+      to top, 
+      #ff8a00, 
+      #da1b60
+    ) .2 .2 .2 5%;
+}
+
 p{
       color: rgb(150, 150, 150);
     font-family: 'Poiret One';
 
     font-size: 30px;
+}
+
+div{
+  padding-left:5em;
 }

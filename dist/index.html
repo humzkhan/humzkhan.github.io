@@ -27,20 +27,46 @@
   The Analogy
 </h3>
 <p>
-  The general analogy in regards to the insurance company is: <br>
-    Action Creator = Creating a form<br>
-    Action = Form<br>
-    Dispatch = Sending the form to different departments<br>
-    Reducers = Departments<br>
-    State = Outsourced history of all the forms that have ever been processed, visible to all<br>
-    <br>  
-  Someone creates one of three forms, for making a claim, joining a new policy, ending a contract with a policy.<br>
-  If they are making a claim the claims department adds there name to the history of claims list.
-  The accounting department gives the money asked for. If they are joining a policy their name is added to the list of names for the policy. 
-  The accounting department adds the fee of joining. If leaving a policy, name is removed from policy name list.
+  The general analogy in regards to the insurance company is: <br><br>
+  <div>
+    <p>
+      Action Creator = Submitting a form<br>
+      Action = Form Types<br>
+      Dispatch = Form Receiver sends the form to the different departments<br>
+      Reducers = Departments<br>
+      State = Outsourced history of all the forms that have ever been processed, visible to all
+    </p>
+  </div>
+
+    <br><br>  
+  Someone submits an insurance form to the company. The form receiver takes 
+  the form and sends it to all the departments. The departments look at the 
+  type of form and act accordingly, updating the necessary information. <br>
+  <br> In our case the accounting department will add or subtract money to 
+  the bank depending on if a person is joining a policy or a claim is being 
+  made. For the claim department they will add a name to their list of claims 
+  everytime someone makes a claim. Finally, for the policy department they 
+  will add or remove names to the list of policy holders based on if someone
+  is joining or canceling a subscription to a policy. <em> Note multiple 
+  departments can be working simultaneously after receiving the same form, so
+  their is lots of overlap. To account for that all departments are sent a copy 
+  of the form each time.</em> The departments update their data by calling on 
+  the centralized data held outside the departments, asking for the newest copy 
+  then they return the updated version. By having the data outsourced the CEO 
+  and other teams can access the data and form a picture of the company more 
+  easily.
   <br><br>
-  When dispatching a form the combineReducers is used to link all reducers so that the form is sent to all of them everytime.
-  The store is the whole company. So when we do store.dispatch(...), we are saying from the company, send the form to ...
+</p>
+
+<h3>
+  Additional Info
+</h3>
+
+<p>
+  When dispatching an action (form) the combineReducers is the redux function used to link all reducers (send the action to each of the departments).
+  The store is another redux function that represents the whole state-tree (the outsourced data the departments access). When store.dispatch(...), is called the state is
+  open to being updated by the reducers invoked with the action.<br><br>
+  If you want a more thorough revision than the brief overview above. The 47 minute full video is <a href="https://www.youtube.com/watch?v=3sjMRS1gJys">here</a>.
 </p>
   
 </body>
